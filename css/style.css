@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+ul, ol, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img, video {
+  vertical-align: middle;
+}
+
+input, select, textarea {
+  outline: 0;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+}
+
+input {
+  outline: 0;
+}
+
+#wrap .main_banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+#wrap .main_banner .center {
+  width: 80%;
+}
+#wrap .main_banner .center .bg {
+  color: #eee;
+  font-size: 250px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  z-index: -1;
+  white-space: nowrap;
+}
+#wrap .main_banner .center .top_line {
+  margin-bottom: 200px;
+}
+#wrap .main_banner .center .top_line h2 {
+  font-size: 130px;
+  font-weight: 400;
+  margin-bottom: 28px;
+  line-height: 1.2;
+}
+#wrap .main_banner .center .top_line h2::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 130px;
+  background-color: #222;
+  margin-left: 10px;
+  transform: translateY(15px);
+  -webkit-animation: blink 0.5s linear 0s infinite normal backwards;
+          animation: blink 0.5s linear 0s infinite normal backwards;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#wrap .main_banner .center .top_line h3 {
+  font-size: 34px;
+  color: #ccc;
+}
+#wrap .main_banner .center .bot_line {
+  display: flex;
+  justify-content: space-between;
+}
+#wrap .main_banner .center .bot_line .left {
+  width: 40%;
+}
+#wrap .main_banner .center .bot_line .right {
+  width: 60%;
+}
+#wrap .main_banner .center .bot_line .right h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+#wrap .main_banner .center .bot_line .right p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+#wrap .artworks .artwork {
+  display: flex;
+  transition: all 0.5s;
+}
+#wrap .artworks .artwork .left_text {
+  width: 50%;
+}
+#wrap .artworks .artwork .left_text .box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+#wrap .artworks .artwork .left_text .box .num {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+#wrap .artworks .artwork .left_text .box .title {
+  font-size: 44px;
+}
+#wrap .artworks .artwork .left_text .box h2 {
+  color: #222;
+}
+#wrap .artworks .artwork .left_text .box ul {
+  margin: 25px 0;
+}
+#wrap .artworks .artwork .left_text .box ul li {
+  color: #333;
+  margin: 15px 0;
+}
+#wrap .artworks .artwork .left_text .box .address a {
+  font-size: 25px;
+  color: #333;
+  position: relative;
+  left: 0;
+  transition: all 0.5s;
+}
+#wrap .artworks .artwork .left_text .box .address a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: 7px;
+  width: 0;
+  height: 2px;
+  background: #333;
+  transition: all 0.5s;
+}
+#wrap .artworks .artwork .left_text .box .address a:hover {
+  left: 10px;
+}
+#wrap .artworks .artwork .left_text .box .address a:hover::after {
+  width: 100%;
+}
+#wrap .artworks .artwork .right_img {
+  width: 50%;
+}
+#wrap .artworks .artwork .right_img img {
+  width: 100%;
+}
+#wrap .artworks .artwork.black {
+  background-color: #000;
+}
+#wrap .artworks .artwork.black .box h2 {
+  color: #fff;
+}
+#wrap .artworks .artwork.black .box ul li {
+  color: #fff;
+}
+#wrap .artworks .artwork.black .box .address a {
+  color: #fff;
+}
+#wrap .contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+#wrap .contact .center {
+  width: 80%;
+}
+#wrap .contact .center .bg {
+  color: #eee;
+  font-size: 224px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  white-space: nowrap;
+}
+#wrap .contact .center h2 {
+  font-size: 42px;
+  color: #222;
+  margin: 20px 0;
+}

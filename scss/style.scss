@@ -1,0 +1,7 @@
+@charset "utf-8"; //한글깨짐방지
+// css reset 작업코드
+@import "reset";
+// 상단, 중단, 하단 레이아웃 구성 파일
+@import "layout";
+// 반복코드 변수로 구성
+@import "variable";
