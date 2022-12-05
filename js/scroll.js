@@ -28,6 +28,14 @@ window.addEventListener("scroll",() => {
         artwork.forEach((item, index) => {
             item.classList.add("black");
         });
-        contact_bg.style.left = (scTop-12000) + "px";
+        if(window.matchMedia('screen and (min-width:1201px)').matches) {
+            contact_bg.style.left = (scTop - artwork03.offsetTop - 3000) + "px";
+        }
+        else if(window.matchMedia('screen and (max-width:1200px) and (min-width:1023px)').matches) {
+            contact_bg.style.left = (scTop - artwork03.offsetTop - 2000) + "px";
+        }
+        else if (window.matchMedia('screen and (max-width:1023px) and (min-width:768px)').matches) {
+            contact_bg.style.left = (scTop - artwork03.offsetTop - 1000) + "px";
+        }
     }
 });

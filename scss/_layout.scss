@@ -1,8 +1,26 @@
 #wrap {
+    .header {
+        display:flex; justify-content:center;
+        background-color:#fff;
+        position:fixed; width:100%;
+        z-index:99;
+        .center {
+            width:80%; padding:25px 125px;
+            display:flex; justify-content:space-between; align-items:center;
+            border-bottom:1px solid #000;
+            h1 {}
+            ul {
+                display:flex;
+                li {
+                    margin-left:30px;
+                }
+            }
+        }
+    }
     .main_banner {
         position:relative;
         display:flex; justify-content:center;
-        height:100vh; padding:50px 0; box-sizing:border-box;
+        height:100vh; padding:100px 0 50px 0; box-sizing:border-box;
         .center {
             width:80%;
             // ↓ 수정
@@ -14,6 +32,7 @@
             .top_line {
                 margin-bottom:200px;
                 h2 {
+                    width:950px;
                     font-size:130px; font-weight:400;
                     margin-bottom:28px; line-height:1.2;
                     &::after {
@@ -33,12 +52,16 @@
                 }
             }
             .bot_line {
-                display:flex; justify-content:space-between;
-                .left {width:40%;}
-                .right {
-                    width:60%;
-                    h2 {font-size:32px; margin-bottom:20px;}
-                    p {font-size:16px; line-height:1.5;}
+                position:absolute; bottom:100px; right:100px;
+                h2 {font-size:32px; margin-bottom:20px;}
+                ul {
+                    li {
+                        font-size:16px; line-height:1.5;
+                        margin-bottom:10px;
+                        span {
+                            font-weight:bold;
+                        }
+                    }
                 }
             }
         }
@@ -58,18 +81,28 @@
                     .title {font-size:44px;}
                     h2 {color:#222;}
                     ul {
+                        width:90%;
                         margin:25px 0;
-                        li {color:#333; margin:15px 0;}
+                        li {
+                            color:#222; margin:30px 0;
+                            span {font-weight:bold; margin-right:5px;}
+                            a {
+                                color:#222;
+                                &:hover {
+                                    text-decoration:underline;
+                                }
+                            }
+                        }
                     }
                     .address {
                         a {
                             font-size:25px; color:#333;
                             position:relative; left:0;
                             transition:all 0.5s;
+                            margin-right:15px;
                             &::after {
-                                content:""; display:block; position:absolute;
-                                margin-top:7px;
-                                width:0; height:2px; background:#333;
+                                content:""; display:block; position:absolute; left:0; bottom:-3px;
+                                width:0; height:1px; background:#333;
                                 transition:all 0.5s;
                             }
                             &:hover {
@@ -98,10 +131,16 @@
                 ul {
                     li {
                         color:#fff;
+                        a {color:#fff;}
                     }
                 }
                 .address {
-                    a {color:#fff;}
+                    a {
+                        color:#fff;
+                        &::after {
+                            background-color:#fff;
+                        }
+                    }
                 }
             }
         }
@@ -117,11 +156,94 @@
                 position:absolute; top:0; left:0; z-index:-1;
                 white-space:nowrap;
             }
-            h2 {
-                font-size:42px; color:#222;
-                margin:20px 0;
+            .text_box {
+                display:flex; flex-direction:column; justify-content:space-between;
+                height:50vh;
+                .contact_me {
+                    font-size:130px; font-weight:500;
+                }
+                .context {
+                    h2 {
+                        font-size:42px; color:#222;
+                        margin:25px 0; font-weight:400;
+                        span {font-weight:bold; margin-right:10px;}
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        background-color:#222;
+        text-align:center;
+        padding:50px 0;
+        p {
+            color:#aaa;
+            font-size:13px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    #wrap {
+        .header {
+            .center {
+                padding:25px 50px;
+            }
+        }
+        .main_banner {
+            .center {
+                .top_line {
+                    h2 {
+                        font-size:100px;
+                        width:750px;
+                    }
+                }
+                .bot_line {
+                    width:90%;
+                    right:50px;
+                }
             }
         }
     }
 }
 
+@media (max-width:1000px) {
+    #wrap {
+        .header {
+            .center {
+                padding:25px 50px;
+            }
+        }
+        .main_banner {
+            .center {
+                .top_line {
+                    h2 {
+                        width:100%;
+                    }
+                }
+                .bot_line {
+                    width:85%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    #wrap {
+        .main_banner {
+            .center {
+                .top_line {
+                    h2 {
+                        font-size:80px;
+                        width:100%;
+                    }
+                }
+                .bot_line {
+                    width:80%;
+                    right:80px;
+                }
+            }
+        }
+    }
+}

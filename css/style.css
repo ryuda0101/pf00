@@ -43,12 +43,34 @@ input {
   outline: 0;
 }
 
+#wrap .header {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+#wrap .header .center {
+  width: 80%;
+  padding: 25px 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+}
+#wrap .header .center ul {
+  display: flex;
+}
+#wrap .header .center ul li {
+  margin-left: 30px;
+}
 #wrap .main_banner {
   position: relative;
   display: flex;
   justify-content: center;
   height: 100vh;
-  padding: 50px 0;
+  padding: 100px 0 50px 0;
   box-sizing: border-box;
 }
 #wrap .main_banner .center {
@@ -68,6 +90,7 @@ input {
   margin-bottom: 200px;
 }
 #wrap .main_banner .center .top_line h2 {
+  width: 950px;
   font-size: 130px;
   font-weight: 400;
   margin-bottom: 28px;
@@ -105,22 +128,21 @@ input {
   color: #ccc;
 }
 #wrap .main_banner .center .bot_line {
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
 }
-#wrap .main_banner .center .bot_line .left {
-  width: 40%;
-}
-#wrap .main_banner .center .bot_line .right {
-  width: 60%;
-}
-#wrap .main_banner .center .bot_line .right h2 {
+#wrap .main_banner .center .bot_line h2 {
   font-size: 32px;
   margin-bottom: 20px;
 }
-#wrap .main_banner .center .bot_line .right p {
+#wrap .main_banner .center .bot_line ul li {
   font-size: 16px;
   line-height: 1.5;
+  margin-bottom: 10px;
+}
+#wrap .main_banner .center .bot_line ul li span {
+  font-weight: bold;
 }
 #wrap .artworks .artwork {
   display: flex;
@@ -150,11 +172,22 @@ input {
   color: #222;
 }
 #wrap .artworks .artwork .left_text .box ul {
+  width: 90%;
   margin: 25px 0;
 }
 #wrap .artworks .artwork .left_text .box ul li {
-  color: #333;
-  margin: 15px 0;
+  color: #222;
+  margin: 30px 0;
+}
+#wrap .artworks .artwork .left_text .box ul li span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+#wrap .artworks .artwork .left_text .box ul li a {
+  color: #222;
+}
+#wrap .artworks .artwork .left_text .box ul li a:hover {
+  text-decoration: underline;
 }
 #wrap .artworks .artwork .left_text .box .address a {
   font-size: 25px;
@@ -162,14 +195,16 @@ input {
   position: relative;
   left: 0;
   transition: all 0.5s;
+  margin-right: 15px;
 }
 #wrap .artworks .artwork .left_text .box .address a::after {
   content: "";
   display: block;
   position: absolute;
-  margin-top: 7px;
+  left: 0;
+  bottom: -3px;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: #333;
   transition: all 0.5s;
 }
@@ -194,8 +229,14 @@ input {
 #wrap .artworks .artwork.black .box ul li {
   color: #fff;
 }
+#wrap .artworks .artwork.black .box ul li a {
+  color: #fff;
+}
 #wrap .artworks .artwork.black .box .address a {
   color: #fff;
+}
+#wrap .artworks .artwork.black .box .address a::after {
+  background-color: #fff;
 }
 #wrap .contact {
   height: 100vh;
@@ -217,8 +258,67 @@ input {
   z-index: -1;
   white-space: nowrap;
 }
-#wrap .contact .center h2 {
+#wrap .contact .center .text_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+}
+#wrap .contact .center .text_box .contact_me {
+  font-size: 130px;
+  font-weight: 500;
+}
+#wrap .contact .center .text_box .context h2 {
   font-size: 42px;
   color: #222;
-  margin: 20px 0;
+  margin: 25px 0;
+  font-weight: 400;
+}
+#wrap .contact .center .text_box .context h2 span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+#wrap .footer {
+  background-color: #222;
+  text-align: center;
+  padding: 50px 0;
+}
+#wrap .footer p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (max-width: 1200px) {
+  #wrap .header .center {
+    padding: 25px 50px;
+  }
+  #wrap .main_banner .center .top_line h2 {
+    font-size: 100px;
+    width: 750px;
+  }
+  #wrap .main_banner .center .bot_line {
+    width: 90%;
+    right: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  #wrap .header .center {
+    padding: 25px 50px;
+  }
+  #wrap .main_banner .center .top_line h2 {
+    width: 100%;
+  }
+  #wrap .main_banner .center .bot_line {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  #wrap .main_banner .center .top_line h2 {
+    font-size: 80px;
+    width: 100%;
+  }
+  #wrap .main_banner .center .bot_line {
+    width: 80%;
+    right: 80px;
+  }
 }
