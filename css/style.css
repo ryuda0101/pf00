@@ -283,10 +283,15 @@ input {
   font-size: 130px;
   font-weight: 500;
 }
+#wrap .container .contact .center .text_box .context {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 55%;
+}
 #wrap .container .contact .center .text_box .context h2 {
-  font-size: 42px;
+  font-size: 25px;
   color: #222;
-  margin: 25px 0;
   font-weight: 400;
 }
 #wrap .container .contact .center .text_box .context h2 span {
