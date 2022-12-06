@@ -65,6 +65,15 @@ input {
 #wrap .header .center ul li {
   margin-left: 30px;
 }
+#wrap .header .center ul li a {
+  padding: 5px 10px;
+  border-radius: 35px;
+  color: #000;
+}
+#wrap .header .center ul li.black a {
+  background-color: #000;
+  color: #fff;
+}
 #wrap .main_banner {
   position: relative;
   display: flex;
@@ -144,14 +153,14 @@ input {
 #wrap .main_banner .center .bot_line ul li span {
   font-weight: bold;
 }
-#wrap .artworks .artwork {
+#wrap .container .artwork {
   display: flex;
   transition: all 0.5s;
 }
-#wrap .artworks .artwork .left_text {
+#wrap .container .artwork .left_text {
   width: 50%;
 }
-#wrap .artworks .artwork .left_text .box {
+#wrap .container .artwork .left_text .box {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -161,35 +170,38 @@ input {
   position: sticky;
   top: 0;
 }
-#wrap .artworks .artwork .left_text .box .num {
+#wrap .container .artwork .left_text .box .num {
   font-size: 28px;
   margin-bottom: 30px;
 }
-#wrap .artworks .artwork .left_text .box .title {
+#wrap .container .artwork .left_text .box .title {
   font-size: 44px;
 }
-#wrap .artworks .artwork .left_text .box h2 {
+#wrap .container .artwork .left_text .box h2 {
   color: #222;
 }
-#wrap .artworks .artwork .left_text .box ul {
-  width: 90%;
+#wrap .container .artwork .left_text .box h2 a {
+  color: #222;
+}
+#wrap .container .artwork .left_text .box ul {
+  width: 87%;
   margin: 25px 0;
 }
-#wrap .artworks .artwork .left_text .box ul li {
+#wrap .container .artwork .left_text .box ul li {
   color: #222;
   margin: 30px 0;
 }
-#wrap .artworks .artwork .left_text .box ul li span {
+#wrap .container .artwork .left_text .box ul li span {
   font-weight: bold;
   margin-right: 5px;
 }
-#wrap .artworks .artwork .left_text .box ul li a {
+#wrap .container .artwork .left_text .box ul li a {
   color: #222;
 }
-#wrap .artworks .artwork .left_text .box ul li a:hover {
+#wrap .container .artwork .left_text .box ul li a:hover {
   text-decoration: underline;
 }
-#wrap .artworks .artwork .left_text .box .address a {
+#wrap .container .artwork .left_text .box .address a {
   font-size: 25px;
   color: #333;
   position: relative;
@@ -197,7 +209,7 @@ input {
   transition: all 0.5s;
   margin-right: 15px;
 }
-#wrap .artworks .artwork .left_text .box .address a::after {
+#wrap .container .artwork .left_text .box .address a::after {
   content: "";
   display: block;
   position: absolute;
@@ -208,47 +220,50 @@ input {
   background: #333;
   transition: all 0.5s;
 }
-#wrap .artworks .artwork .left_text .box .address a:hover {
+#wrap .container .artwork .left_text .box .address a:hover {
   left: 10px;
 }
-#wrap .artworks .artwork .left_text .box .address a:hover::after {
+#wrap .container .artwork .left_text .box .address a:hover::after {
   width: 100%;
 }
-#wrap .artworks .artwork .right_img {
+#wrap .container .artwork .right_img {
   width: 50%;
 }
-#wrap .artworks .artwork .right_img img {
+#wrap .container .artwork .right_img img {
   width: 100%;
 }
-#wrap .artworks .artwork.black {
+#wrap .container .artwork.black {
   background-color: #000;
 }
-#wrap .artworks .artwork.black .box h2 {
+#wrap .container .artwork.black .box h2 {
   color: #fff;
 }
-#wrap .artworks .artwork.black .box ul li {
+#wrap .container .artwork.black .box h2 a {
   color: #fff;
 }
-#wrap .artworks .artwork.black .box ul li a {
+#wrap .container .artwork.black .box ul li {
   color: #fff;
 }
-#wrap .artworks .artwork.black .box .address a {
+#wrap .container .artwork.black .box ul li a {
   color: #fff;
 }
-#wrap .artworks .artwork.black .box .address a::after {
+#wrap .container .artwork.black .box .address a {
+  color: #fff;
+}
+#wrap .container .artwork.black .box .address a::after {
   background-color: #fff;
 }
-#wrap .contact {
+#wrap .container .contact {
   height: 100vh;
   display: flex;
   justify-content: center;
   position: relative;
   align-items: center;
 }
-#wrap .contact .center {
+#wrap .container .contact .center {
   width: 80%;
 }
-#wrap .contact .center .bg {
+#wrap .container .contact .center .bg {
   color: #eee;
   font-size: 224px;
   font-weight: 400;
@@ -258,23 +273,23 @@ input {
   z-index: -1;
   white-space: nowrap;
 }
-#wrap .contact .center .text_box {
+#wrap .container .contact .center .text_box {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 50vh;
 }
-#wrap .contact .center .text_box .contact_me {
+#wrap .container .contact .center .text_box .contact_me {
   font-size: 130px;
   font-weight: 500;
 }
-#wrap .contact .center .text_box .context h2 {
+#wrap .container .contact .center .text_box .context h2 {
   font-size: 42px;
   color: #222;
   margin: 25px 0;
   font-weight: 400;
 }
-#wrap .contact .center .text_box .context h2 span {
+#wrap .container .contact .center .text_box .context h2 span {
   font-weight: bold;
   margin-right: 10px;
 }
