@@ -99,11 +99,11 @@ input {
   margin-bottom: 200px;
 }
 #wrap .main_banner .center .top_line h2 {
-  width: 950px;
-  font-size: 130px;
+  font-size: 140px;
   font-weight: 400;
   margin-bottom: 28px;
   line-height: 1.2;
+  white-space: pre-line;
 }
 #wrap .main_banner .center .top_line h2::after {
   content: "";

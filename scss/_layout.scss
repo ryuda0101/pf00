@@ -42,9 +42,9 @@
             .top_line {
                 margin-bottom:200px;
                 h2 {
-                    width:950px;
-                    font-size:130px; font-weight:400;
+                    font-size:140px; font-weight:400;
                     margin-bottom:28px; line-height:1.2;
+                    white-space:pre-line;
                     &::after {
                         content:"";
                         display:inline-block;
