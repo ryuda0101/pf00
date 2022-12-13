@@ -1,5 +1,5 @@
 const typing = document.querySelector("#wrap .main_banner .center .top_line h2");
-let context = "웹 퍼블리셔 & 프론트엔드 \n 류다연 입니다.";
+let context = '신입 개발자\n류다연 입니다.';
 let dummy_num = 0;
 
 let typing_act = setInterval(() => {
