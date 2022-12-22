@@ -4,6 +4,9 @@ const main_bg = document.querySelector(".main_banner .center .bg");
 const contact_bg = document.querySelector(".contact .center .bg");
 // 스크롤 이동 될 태그들
 let container = document.querySelectorAll("#wrap .container .cont");
+// 스크롤 이동시 검은색으로 변할 태그들
+let blackWork01 = document.querySelector('#wrap .container .artwork01')
+let blackWork02 = document.querySelector('#wrap .container .artwork02')
 // 헤더의 gnb 메뉴
 const gnb_menu = document.querySelectorAll("#wrap .header .center ul li");
 
@@ -29,10 +32,7 @@ window.addEventListener("scroll",() => {
         if (scTop > container[i].offsetTop) {
             header_remove();
             gnb_menu[i].classList.add("black");
-            if (i == 0 || i == 2) {
-                addBlack();
-            }
-            else if (scTop > container[2].offsetTop) {
+            if (scTop > container[2].offsetTop) {
                 if(window.matchMedia('screen and (min-width:1201px)').matches) {
                     bg_left(3000);
                 }
@@ -43,9 +43,15 @@ window.addEventListener("scroll",() => {
                     bg_left(1000);
                 }
             }
-            else {
-                removeBlack();
-            }
+        }
+        if (scTop > container[0].offsetTop && scTop < container[1].offsetTop) {
+            addBlack();
+        }
+        else if (scTop > container[2].offsetTop && scTop < container[3].offsetTop) {
+            addBlack();
+        }
+        else {
+            removeBlack();
         }
     }
 });
