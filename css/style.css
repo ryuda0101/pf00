@@ -228,9 +228,14 @@ input {
 }
 #wrap .container .artwork .right_img {
   width: 50%;
+  overflow: hidden;
+}
+#wrap .container .artwork .right_img:hover img {
+  transform: scale(1.05);
 }
 #wrap .container .artwork .right_img img {
   width: 100%;
+  transition: all 0.5s;
 }
 #wrap .container .artwork.black {
   background-color: #000;
